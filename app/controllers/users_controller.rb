@@ -43,7 +43,7 @@ before_action :require_user_logged_in, only: [:index, :show, :followings, :follo
   def likes
     @user = User.find(params[:id])
     @likeposts = @user.likeposts.page(params[:page])
-    @microposts = @user.microposts.order('created_at DESC').page(params[:page])
+    
     counts(@user)
   end
   
