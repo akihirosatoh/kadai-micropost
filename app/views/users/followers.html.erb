@@ -45,6 +45,17 @@ Followers <span class="badge">
 </span>
 <% end %>
 </li>
+
+      <li class="
+<%= 'active' if current_page?(likes_user_path(@user)) %>
+">
+<%= link_to likes_user_path(@user) do %>
+お気に入り <span class="badge">
+<%= @count_likeposts %>
+</span>
+<% end %>
+</li>
+
     </ul>
     
 <%= render 'users', users: @followers %>
